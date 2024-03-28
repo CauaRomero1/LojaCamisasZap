@@ -1,0 +1,86 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3; /* Cor de fundo alterada */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block; /* Alterado para exibição em linha */
+    margin-bottom: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px; /* Adicionado espaçamento interno aos links */
+    background-color: #555; /* Cor de fundo dos links */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+section.featured-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.product {
+    text-align: center;
+    width: 45%; /* Ajustado para 45% para melhor exibição em dispositivos menores */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: #fff; /* Cor de fundo dos produtos */
+    padding: 20px; /* Adicionado preenchimento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: fixed; /* Fixa o rodapé na parte inferior da janela */
+    bottom: 0;
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 600px) {
+    nav ul {
+        display: none;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        background-color: #555;
+        margin-bottom: 5px;
+    }
+
+    .product {
+        width: 100%;
+    }
+}
