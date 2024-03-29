@@ -1,0 +1,40 @@
+
+{
+  "name": "Camisas Zap",
+    "short_name": "Camisas",
+    "description": "Loja online de vendas de camisas esportivas.",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#F9F9F9",
+    "theme_color": "#F9F9F9",
+    "icons": [
+      {
+        "src": "192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "maskable_icon_x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "maskable_icon_x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "maskable_icon.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ]
+  }
+
+ 

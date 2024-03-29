@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#ff0000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisas Zap</title>
+    <!-- Adicionando o ícone -->
+    <link rel="shortcut icon" href="zap-icone.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="teste.json">
+    <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="zap-icone (1).png">
+    <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="zap-icone (2).png">
+</head>
+<body>
+    <header>
+        <h1>Seja Bem Vindo!</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Camisas de Futebol</a></li>
+                <li><a href="#">Camisas de Basquete</a></li>
+                <li><a href="#">Outras Camisas</a></li>
+                <li><a href="mailto:contato@camisaszap.com">Contato</a></li> <!-- Link para e-mail -->
+            </ul>
+        </nav>
+    </header>
+
+    <section class="featured-products">
+      <article class="product">
+          <img src="beci.webp" alt="Camisa 1">
+          <h2>Camisa Barcelona 20/21 Away</h2>
+          <p class="price">R$200,00</p>
+          <button>Comprar</button> <!-- Botão adicionado -->
+      </article>
+
+      <article class="product">
+          <img src="binijuno.webp" alt="Camisa 2">
+          <h2>Camisa Real Madrid 23/24</h2>
+          <p class="price">R$250,00</p>
+          <button>Comprar</button> <!-- Botão adicionado -->
+      </article>
+    </section>
+
+    <footer>
+        <p>Entre em contato via Whatsapp: <a href="tel:+55000000000">(00) 4002-8922</a> | Polos próximos a você: <a href="https://www.google.com/maps/search/lojas+de+camisas+esportivas">Lojas que fazem a entrega de nosso produto</a></p>
+        <p>&copy; Camisas Zap Website</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+<script>
+let newWorker;
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js').then(reg => {
+        reg.addEventListener('updatefound', () => {
+          // A wild service worker has appeared in reg.installing!
+          newWorker = reg.installing;
+          newWorker.addEventListener('statechange', () => {
+            // Has network.state changed?
+            switch (newWorker.state) {
+              case 'installed':
+                if (navigator.serviceWorker.controller) {
+                  // new update available
+                }
+                // No update available
+                break;
+            }
+          });
+        });
+      });
+      let refreshing;
+      navigator.serviceWorker.addEventListener('controllerchange', function () {
+        if (refreshing) return;
+        window.location.reload();
+        refreshing = true;
+      });
+    }
+  </script>
+</html>
